@@ -258,7 +258,19 @@ with tab_dashboard:
             })
 
         df_absorcion = pd.DataFrame(absorcion_data).sort_values("Absorcion %", ascending=False)
-        st.bar_chart(df_absorcion.set_index("Proyecto")["Absorcion %"])
+        # Tabla de absorcion con barras HTML (sin altair)
+        for _, row in df_absorcion.iterrows():
+            pct = row["Absorcion %"]
+            st.markdown(
+                f"""<div style="display:flex;align-items:center;margin-bottom:4px;">
+                    <span style="width:150px;font-size:14px;">{row['Proyecto']}</span>
+                    <div style="flex:1;background:#333;border-radius:4px;height:20px;margin:0 8px;">
+                        <div style="width:{pct}%;background:#e74c3c;height:100%;border-radius:4px;"></div>
+                    </div>
+                    <span style="width:50px;font-size:14px;text-align:right;">{pct:.0f}%</span>
+                </div>""",
+                unsafe_allow_html=True,
+            )
 
         # --- Historial si hay multiples fechas ---
         fechas_unicas = sorted(df_inventario["fecha_revision"].unique())
@@ -280,8 +292,8 @@ with tab_dashboard:
                     })
 
             df_hist = pd.DataFrame(historial)
-            df_pivot = df_hist.pivot(index="fecha", columns="proyecto", values="absorcion")
-            st.line_chart(df_pivot)
+            df_pivot = df_hist.pivot(index="fecha", columns="proyecto", values="absorcion").reset_index()
+            st.dataframe(df_pivot, use_container_width=True, hide_index=True)
 
 
 # --- TAB: Movimientos ---
@@ -332,8 +344,8 @@ with tab_movimientos:
                 if not df_ventas.empty:
                     df_ventas["semana"] = pd.to_datetime(df_ventas["fecha_cambio"]).dt.isocalendar().week.astype(str) + "-" + pd.to_datetime(df_ventas["fecha_cambio"]).dt.isocalendar().year.astype(str)
                     ventas_semana = df_ventas.groupby(["fecha_cambio", "proyecto"]).size().reset_index(name="ventas")
-                    ventas_pivot = ventas_semana.pivot(index="fecha_cambio", columns="proyecto", values="ventas").fillna(0)
-                    st.bar_chart(ventas_pivot)
+                    ventas_pivot = ventas_semana.pivot(index="fecha_cambio", columns="proyecto", values="ventas").fillna(0).reset_index()
+                    st.dataframe(ventas_pivot, use_container_width=True, hide_index=True)
                 else:
                     st.info("No hay ventas registradas en los movimientos.")
 
@@ -365,12 +377,12 @@ with tab_movimientos:
 
             # Grafico de disponibles por fecha (baja = se estan vendiendo)
             st.markdown("**Unidades disponibles por revision** (si baja, se estan vendiendo)")
-            df_disp_pivot = df_hist.pivot(index="fecha", columns="proyecto", values="disponibles")
-            st.line_chart(df_disp_pivot)
+            df_disp_pivot = df_hist.pivot(index="fecha", columns="proyecto", values="disponibles").reset_index()
+            st.dataframe(df_disp_pivot, use_container_width=True, hide_index=True)
 
             st.markdown("**Unidades vendidas por revision** (si sube, hay absorcion)")
-            df_vend_pivot = df_hist.pivot(index="fecha", columns="proyecto", values="vendidas")
-            st.line_chart(df_vend_pivot)
+            df_vend_pivot = df_hist.pivot(index="fecha", columns="proyecto", values="vendidas").reset_index()
+            st.dataframe(df_vend_pivot, use_container_width=True, hide_index=True)
 
 
 # --- TAB: Proyectos ---
