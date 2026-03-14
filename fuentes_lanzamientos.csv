@@ -43,3 +43,26 @@ Google News MX,WebSearch: nuevo lanzamiento desarrollo,2026-03-13,6,ok
 Trovit,WebSearch: preventa CDMX 2026,2026-03-13,2,ok
 Luumo Real Estate,https://www.luumorealestate.com/desarrollos,2026-03-13,0,error_no_data
 TheRedSearch,https://theredsearch.com/processing/,2026-03-13,1741,ok
+La Haus CDMX,https://www.lahaus.mx/venta/desarrollos-inmobiliarios/ciudad-de-mexico,2026-03-14,6,ok
+La Haus Guadalajara,https://www.lahaus.mx/venta/desarrollos-inmobiliarios/guadalajara,2026-03-14,27,ok
+La Haus Monterrey,https://www.lahaus.mx/venta/desarrollos-inmobiliarios/monterrey,2026-03-14,0,sin datos - JS render
+La Haus Mérida,https://www.lahaus.mx/venta/desarrollos-inmobiliarios/merida,2026-03-14,0,sin datos - JS render
+La Haus Cancún,https://www.lahaus.mx/venta/desarrollos-inmobiliarios/cancun,2026-03-14,0,sin datos - JS render
+La Haus Querétaro,https://www.lahaus.mx/venta/desarrollos-inmobiliarios/queretaro,2026-03-14,0,sin datos - JS render
+Behome,https://www.behome.com.mx/desarrollos,2026-03-14,0,ECONNREFUSED
+Monterrey Skyline,https://www.monterreyskyline.com/desarrollos,2026-03-14,0,404
+GDC Desarrollos,https://gdcdesarrollos.com/preventa-departamentos-ciudad-de-mexico-cdmx/,2026-03-14,10,ok
+TuDepa,https://www.tudepa.com/,2026-03-14,15,ok
+Factor Inmobiliario,https://www.factorinmobiliario.mx/en,2026-03-14,1,ok - parcial
+Inmuebles24,https://www.inmuebles24.com/desarrollos.html,2026-03-14,0,bloqueado 403
+Centro Urbano RSS,https://centrourbano.com/feed/,2026-03-14,0,ok - sin lanzamientos relevantes
+Inmobiliare Magazine RSS,https://inmobiliare.com/feed/,2026-03-14,2,ok
+WebSearch CDMX,WebSearch: preventa CDMX 2026,2026-03-14,2,ok
+WebSearch Guadalajara,WebSearch: preventa Guadalajara 2026,2026-03-14,3,ok
+WebSearch Monterrey,WebSearch: preventa Monterrey 2026,2026-03-14,0,ok - sin proyectos específicos nuevos
+WebSearch Cancún/Tulum,WebSearch: preventa Cancún Tulum 2026,2026-03-14,4,ok
+WebSearch Mérida,WebSearch: preventa Mérida 2026,2026-03-14,1,ok
+WebSearch Querétaro,WebSearch: preventa Querétaro 2026,2026-03-14,2,ok
+WebSearch Puebla/León/Tijuana,WebSearch: preventa Puebla León Tijuana 2026,2026-03-14,0,ok - sin proyectos específicos nuevos
+WebSearch lanzamientos marzo,WebSearch: lanzamiento proyecto marzo 2026,2026-03-14,2,ok
+WebSearch Inmuebles24 fallback,WebSearch: site:inmuebles24.com desarrollos preventa,2026-03-14,1,ok
