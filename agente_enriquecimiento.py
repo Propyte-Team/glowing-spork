@@ -38,6 +38,12 @@ except ImportError:
     import requests
     from bs4 import BeautifulSoup
 
+# Fix encoding Windows (cp1252 no soporta todos los caracteres Unicode)
+if sys.stdout.encoding != "utf-8":
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+
 # Cargar .env si existe
 _env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
 if os.path.exists(_env_path):
@@ -1166,7 +1172,7 @@ def subir_a_supabase(sb, resultados, log, existentes, match_mode):
                         errores += 1
                 else:
                     # Slug duplicado, agregar sufijo
-                    row["ext_slug_desarrollo"] = row.get("ext_slug_desarrollo", "") + f"-{i}"
+                    row["slug"] = row.get("slug", "") + f"-{i}"
                     status2, err2 = sb.insert_development(row)
                     if status2 == 201:
                         subidos += 1
