@@ -6,6 +6,8 @@ pdfs/
 
 # Configuracion local
 config.json
+.env
+.env.local
 
 # Python cache
 __pycache__/
