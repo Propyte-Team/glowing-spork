@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY enrichment_agent_v2/ ./enrichment_agent_v2/
 COPY enrichment_runner.py ./enrichment_runner.py
-COPY .env ./.env
 
 RUN pip install --no-cache-dir -r enrichment_agent_v2/requirements.txt
 
