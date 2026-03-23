@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propyte Enrichment Agent</title>
+<style>
+  :root {
+    --navy: #1E3A5F;
+    --teal: #00B4C8;
+    --amber: #F5A623;
+    --green: #2ECC71;
+    --red: #E74C3C;
+    --bg: #F0F2F5;
+    --card: #FFFFFF;
+    --text: #1a1a2e;
+    --muted: #64748b;
+    --border: #e2e8f0;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg); color: var(--text); min-height: 100vh;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, var(--navy) 0%, #2a4f7a 100%);
+    color: white; padding: 16px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+  .header-left { display: flex; align-items: center; gap: 16px; }
+  .header h1 { font-size: 18px; font-weight: 600; }
+  .header-subtitle { font-size: 11px; opacity: 0.6; margin-top: 2px; }
+  .header-right { display: flex; align-items: center; gap: 12px; }
+  .status-badge {
+    display: flex; align-items: center; gap: 6px;
+    padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500;
+    background: rgba(255,255,255,0.1);
+  }
+  .status-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--green); animation: pulse 2s infinite;
+  }
+  .status-dot.offline { background: var(--red); animation: none; }
+  .status-dot.idle { background: var(--amber); animation: none; }
+  @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+  .counter { font-size: 13px; opacity: 0.8; }
+
+  /* Controls bar */
+  .controls-bar {
+    background: var(--card); border-bottom: 1px solid var(--border);
+    padding: 12px 24px; display: flex; align-items: center; gap: 12px;
+    flex-wrap: wrap; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .btn {
+    padding: 8px 20px; border-radius: 8px; border: none;
+    font-size: 13px; font-weight: 600; cursor: pointer;
+    display: flex; align-items: center; gap: 6px;
+    transition: all 0.2s;
+  }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .btn-start { background: var(--green); color: white; }
+  .btn-start:hover:not(:disabled) { background: #27ae60; }
+  .btn-stop { background: var(--red); color: white; }
+  .btn-stop:hover:not(:disabled) { background: #c0392b; }
+  .btn-refresh { background: var(--teal); color: white; }
+  .btn-refresh:hover { background: #009aad; }
+  .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+  .btn-outline:hover { background: #f8fafc; }
+  .btn-outline.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+  .control-group { display: flex; align-items: center; gap: 6px; }
+  .control-label { font-size: 11px; color: var(--muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+  .control-sep { width: 1px; height: 28px; background: var(--border); margin: 0 8px; }
+  .input-sm {
+    padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px;
+    font-size: 13px; width: 70px; text-align: center;
+  }
+
+  /* Main */
+  .main { max-width: 1400px; margin: 0 auto; padding: 20px; }
+
+  /* Cards grid */
+  .cards-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px; margin-bottom: 18px;
+  }
+  .card {
+    background: var(--card); border-radius: 12px; padding: 18px;
+    border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .card-title { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .card-badge { font-size: 10px; padding: 2px 7px; border-radius: 10px; font-weight: 700; }
+  .badge-alta { background: #fef2f2; color: var(--red); }
+  .badge-media { background: #fffbeb; color: var(--amber); }
+  .badge-baja { background: #f0fdf4; color: var(--green); }
+  .card-value { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+  .card-sub { font-size: 11px; color: var(--muted); }
+  .card-delta { font-size: 12px; color: var(--green); font-weight: 500; }
+  .progress-bar { height: 6px; background: #e5e7eb; border-radius: 3px; overflow: hidden; margin-top: 8px; }
+  .progress-fill { height: 100%; border-radius: 3px; transition: width 0.8s ease; }
+  .fill-teal { background: var(--teal); }
+  .fill-green { background: var(--green); }
+  .fill-amber { background: var(--amber); }
+  .fill-navy { background: var(--navy); }
+  .fill-red { background: var(--red); }
+
+  /* Columns */
+  .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+  @media (max-width: 900px) { .columns { grid-template-columns: 1fr; } }
+
+  /* Feed */
+  .feed-container {
+    background: var(--card); border-radius: 12px; padding: 16px;
+    border: 1px solid var(--border); max-height: 480px; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .section-title { font-size: 13px; font-weight: 700; margin-bottom: 10px; color: var(--navy); }
+  .feed-list { overflow-y: auto; flex: 1; }
+  .feed-item {
+    display: flex; align-items: flex-start; gap: 6px;
+    padding: 7px 0; border-bottom: 1px solid #f1f5f9;
+    font-size: 11.5px; line-height: 1.5;
+  }
+  .feed-icon { flex-shrink: 0; font-size: 13px; margin-top: 1px; }
+  .feed-time { color: var(--muted); white-space: nowrap; flex-shrink: 0; font-family: monospace; font-size: 11px; }
+  .feed-dev { font-weight: 600; color: var(--navy); }
+  .feed-city { color: var(--muted); }
+  .feed-fields { color: var(--teal); font-weight: 500; }
+  .feed-portal {
+    background: #f1f5f9; padding: 1px 6px; border-radius: 3px;
+    font-size: 10px; color: var(--muted); white-space: nowrap;
+  }
+
+  /* Table */
+  .table-container {
+    background: var(--card); border-radius: 12px; padding: 16px;
+    border: 1px solid var(--border); max-height: 480px; overflow: auto;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th {
+    text-align: left; padding: 8px; font-weight: 600; color: var(--muted);
+    border-bottom: 2px solid var(--border); font-size: 10px;
+    text-transform: uppercase; letter-spacing: 0.5px; position: sticky; top: 0; background: white;
+  }
+  td { padding: 7px 8px; border-bottom: 1px solid #f1f5f9; }
+  .pct-cell { font-weight: 700; font-family: monospace; }
+  .pct-high { color: var(--green); }
+  .pct-med { color: var(--amber); }
+  .pct-low { color: var(--red); }
+
+  /* Empty */
+  .empty { text-align: center; padding: 30px; color: var(--muted); font-size: 13px; }
+
+  /* Agent running overlay */
+  .running-indicator {
+    display: none; align-items: center; gap: 8px;
+    padding: 8px 16px; background: #ecfdf5; border: 1px solid #a7f3d0;
+    border-radius: 8px; font-size: 12px; color: #065f46; font-weight: 500;
+  }
+  .running-indicator.active { display: flex; }
+  .spinner {
+    width: 14px; height: 14px; border: 2px solid #a7f3d0;
+    border-top-color: var(--green); border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-left">
+    <div>
+      <h1>Propyte Enrichment Agent</h1>
+      <div class="header-subtitle">agente.propyte.com</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <span class="counter" id="counter">0 registros esta sesion</span>
+    <div class="status-badge">
+      <span class="status-dot idle" id="statusDot"></span>
+      <span id="statusText">Conectando...</span>
+    </div>
+  </div>
+</div>
+
+<!-- Controls -->
+<div class="controls-bar">
+  <button class="btn btn-start" id="btnStart" onclick="startAgent()">&#9654; Iniciar</button>
+  <button class="btn btn-stop" id="btnStop" onclick="stopAgent()" disabled>&#9724; Detener</button>
+  <button class="btn btn-refresh" onclick="refreshCoverage()">&#8635; Actualizar</button>
+
+  <div class="control-sep"></div>
+
+  <div class="control-group">
+    <span class="control-label">Estrategias:</span>
+    <button class="btn btn-outline active" data-strat="geocode" onclick="toggleStrat(this)">Geocoding</button>
+    <button class="btn btn-outline active" data-strat="scrape" onclick="toggleStrat(this)">Scraping</button>
+    <button class="btn btn-outline active" data-strat="search" onclick="toggleStrat(this)">Web Search</button>
+    <button class="btn btn-outline active" data-strat="ai" onclick="toggleStrat(this)">AI Haiku</button>
+  </div>
+
+  <div class="control-sep"></div>
+
+  <div class="control-group">
+    <span class="control-label">Limite:</span>
+    <input class="input-sm" type="number" id="limitInput" value="50" min="1" max="500">
+  </div>
+
+  <div class="running-indicator" id="runningIndicator">
+    <div class="spinner"></div>
+    <span id="runningText">Procesando...</span>
+  </div>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+  <!-- Progress Cards -->
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Precio</span>
+        <span class="card-badge badge-alta">ALTA</span>
+      </div>
+      <div class="card-value" id="val-price">--%</div>
+      <div class="card-sub" id="sub-price"></div>
+      <div class="card-delta" id="delta-price"></div>
+      <div class="progress-bar"><div class="progress-fill fill-teal" id="bar-price" style="width:0%"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Coordenadas</span>
+        <span class="card-badge badge-alta">ALTA</span>
+      </div>
+      <div class="card-value" id="val-coords">--%</div>
+      <div class="card-sub" id="sub-coords"></div>
+      <div class="card-delta" id="delta-coords"></div>
+      <div class="progress-bar"><div class="progress-fill fill-green" id="bar-coords" style="width:0%"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Descripcion</span>
+        <span class="card-badge badge-media">MEDIA</span>
+      </div>
+      <div class="card-value" id="val-desc">--%</div>
+      <div class="card-sub" id="sub-desc"></div>
+      <div class="card-delta" id="delta-desc"></div>
+      <div class="progress-bar"><div class="progress-fill fill-navy" id="bar-desc" style="width:0%"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Total Units</span>
+        <span class="card-badge badge-media">MEDIA</span>
+      </div>
+      <div class="card-value" id="val-units">--%</div>
+      <div class="card-sub" id="sub-units"></div>
+      <div class="card-delta" id="delta-units"></div>
+      <div class="progress-bar"><div class="progress-fill fill-amber" id="bar-units" style="width:0%"></div></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Telefono</span>
+        <span class="card-badge badge-media">MEDIA</span>
+      </div>
+      <div class="card-value" id="val-phone">--%</div>
+      <div class="card-sub" id="sub-phone"></div>
+      <div class="card-delta" id="delta-phone"></div>
+      <div class="progress-bar"><div class="progress-fill fill-red" id="bar-phone" style="width:0%"></div></div>
+    </div>
+  </div>
+
+  <!-- Feed + Portal table -->
+  <div class="columns">
+    <div class="feed-container">
+      <div class="section-title">Feed en Vivo</div>
+      <div class="feed-list" id="feedList">
+        <div class="empty">Esperando eventos...</div>
+      </div>
+    </div>
+    <div class="table-container">
+      <div class="section-title">Cobertura por Portal</div>
+      <table>
+        <thead>
+          <tr><th>Portal</th><th>Registros</th><th>% Precio</th><th>% Coords</th><th>% Desc</th></tr>
+        </thead>
+        <tbody id="portalTable">
+          <tr><td colspan="5" class="empty">Cargando...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  let ws = null;
+  let totalProcessed = 0;
+  let sessionDeltas = { price: 0, coords: 0, desc: 0, units: 0, phone: 0 };
+  const feedItems = [];
+  const MAX_FEED = 50;
+  let agentRunning = false;
+
+  const $ = id => document.getElementById(id);
+
+  // --- Strategy toggles ---
+  window.toggleStrat = function(btn) {
+    btn.classList.toggle('active');
+  };
+
+  function getSelectedStrategies() {
+    return [...document.querySelectorAll('[data-strat].active')].map(b => b.dataset.strat);
+  }
+
+  // --- Agent controls ---
+  window.startAgent = async function() {
+    const strats = getSelectedStrategies();
+    const limit = parseInt($('limitInput').value) || 50;
+    try {
+      const resp = await fetch('/api/start', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ strategies: strats, limit })
+      });
+      const data = await resp.json();
+      if (resp.ok) {
+        setAgentState('running');
+      } else {
+        alert(data.error || 'Error starting agent');
+      }
+    } catch(e) {
+      alert('Error: ' + e.message);
+    }
+  };
+
+  window.stopAgent = async function() {
+    try {
+      await fetch('/api/stop', { method: 'POST' });
+      setAgentState('stopping');
+    } catch(e) {
+      alert('Error: ' + e.message);
+    }
+  };
+
+  function setAgentState(state) {
+    agentRunning = state === 'running';
+    $('btnStart').disabled = agentRunning || state === 'stopping';
+    $('btnStop').disabled = !agentRunning;
+    const indicator = $('runningIndicator');
+    if (agentRunning) {
+      indicator.classList.add('active');
+      $('statusDot').className = 'status-dot';
+      $('statusText').textContent = 'Procesando';
+    } else if (state === 'stopping') {
+      indicator.classList.add('active');
+      $('runningText').textContent = 'Deteniendo...';
+      $('statusDot').className = 'status-dot idle';
+      $('statusText').textContent = 'Deteniendo';
+    } else {
+      indicator.classList.remove('active');
+      $('runningText').textContent = 'Procesando...';
+      $('statusDot').className = 'status-dot idle';
+      $('statusText').textContent = state === 'idle' ? 'Listo' : state;
+    }
+  }
+
+  // --- Coverage ---
+  window.refreshCoverage = async function() {
+    try {
+      const resp = await fetch('/api/coverage');
+      const data = await resp.json();
+      if (data.stats) updateCards(data.stats);
+      if (data.portals) updatePortalTable(data.portals);
+    } catch(e) { console.error('Coverage error:', e); }
+  };
+
+  function pct(have, total) {
+    if (!total || total === 0) return 0;
+    return Math.round((have / total) * 100);
+  }
+  function pctClass(p) {
+    if (p >= 70) return 'pct-high';
+    if (p >= 30) return 'pct-med';
+    return 'pct-low';
+  }
+
+  function updateCards(s) {
+    const t = parseInt(s.total) || 1;
+    const fields = [
+      { id: 'price', have: parseInt(s.con_precio_min)||0, key: 'price' },
+      { id: 'coords', have: parseInt(s.con_lat)||0, key: 'coords' },
+      { id: 'desc', have: parseInt(s.con_descripcion)||0, key: 'desc' },
+      { id: 'units', have: parseInt(s.con_num_unidades)||0, key: 'units' },
+      { id: 'phone', have: parseInt(s.con_telefono)||0, key: 'phone' },
+    ];
+    fields.forEach(f => {
+      const p = pct(f.have, t);
+      $('val-' + f.id).textContent = p + '%';
+      $('bar-' + f.id).style.width = p + '%';
+      $('sub-' + f.id).textContent = f.have.toLocaleString() + ' / ' + t.toLocaleString();
+      const d = sessionDeltas[f.key];
+      $('delta-' + f.id).textContent = d > 0 ? '+' + d + ' esta sesion' : '';
+    });
+  }
+
+  function updatePortalTable(portals) {
+    if (!portals || !portals.length) {
+      $('portalTable').innerHTML = '<tr><td colspan="5" class="empty">Sin datos</td></tr>';
+      return;
+    }
+    $('portalTable').innerHTML = portals.map(p => {
+      const t = parseInt(p.registros)||1;
+      const pp = pct(parseInt(p.con_precio)||0, t);
+      const pc = pct(parseInt(p.con_coords)||0, t);
+      const pd = pct(parseInt(p.con_descripcion)||0, t);
+      return `<tr>
+        <td><strong>${p.portal||'N/A'}</strong></td>
+        <td>${p.registros}</td>
+        <td class="pct-cell ${pctClass(pp)}">${pp}%</td>
+        <td class="pct-cell ${pctClass(pc)}">${pc}%</td>
+        <td class="pct-cell ${pctClass(pd)}">${pd}%</td>
+      </tr>`;
+    }).join('');
+  }
+
+  // --- Feed ---
+  function addFeed(data) {
+    const time = new Date().toLocaleTimeString('es-MX', {hour12:false});
+    let icon = '&#x2705;';
+    let fields = (data.fields||[]).join(', ');
+    let portal = data.portal ? `<span class="feed-portal">${data.portal}</span>` : '';
+
+    if (data.type === 'error') { icon = '&#x274C;'; fields = data.error_msg || 'Error'; }
+    if (data.strategy === 'geocoding') icon = '&#x1F4CD;';
+    if (data.strategy === 'ai_haiku') icon = '&#x1F916;';
+    if (data.strategy === 'url_scrape') icon = '&#x1F310;';
+    if (data.strategy === 'web_search') icon = '&#x1F50D;';
+
+    feedItems.unshift(`<div class="feed-item">
+      <span class="feed-icon">${icon}</span>
+      <span class="feed-time">${time}</span>
+      <span class="feed-dev">${data.dev_name||'?'}</span>
+      <span class="feed-city">${data.city||''}</span>
+      <span class="feed-fields">${fields}</span>
+      ${portal}
+    </div>`);
+    if (feedItems.length > MAX_FEED) feedItems.pop();
+    $('feedList').innerHTML = feedItems.join('');
+  }
+
+  // --- WebSocket ---
+  function connect() {
+    const proto = location.protocol === 'https:' ? 'wss:' : 'ws:';
+    ws = new WebSocket(`${proto}//${location.host}/ws`);
+
+    ws.onopen = () => {
+      $('statusDot').className = 'status-dot idle';
+      $('statusText').textContent = 'Conectado';
+    };
+    ws.onclose = () => {
+      $('statusDot').className = 'status-dot offline';
+      $('statusText').textContent = 'Reconectando...';
+      setTimeout(connect, 3000);
+    };
+    ws.onerror = () => { $('statusDot').className = 'status-dot offline'; };
+
+    ws.onmessage = (e) => {
+      try { handleEvent(JSON.parse(e.data)); } catch(err) { console.error(err); }
+    };
+  }
+
+  function handleEvent(data) {
+    switch(data.type) {
+      case 'enrichment':
+        totalProcessed++;
+        $('counter').textContent = totalProcessed + ' registros esta sesion';
+        addFeed(data);
+        const f = data.fields || [];
+        if (f.includes('price_min_mxn')) sessionDeltas.price++;
+        if (f.includes('lat')) sessionDeltas.coords++;
+        if (f.includes('description_es')) sessionDeltas.desc++;
+        if (f.includes('total_units')) sessionDeltas.units++;
+        if (f.includes('contact_phone')) sessionDeltas.phone++;
+        if (totalProcessed % 5 === 0) refreshCoverage();
+        break;
+      case 'error':
+        addFeed(data);
+        break;
+      case 'gap_update':
+        if (data.gaps) {
+          const g = data.gaps;
+          const t = g.total_developments || 1;
+          updateCards({
+            total: t,
+            con_precio_min: t - (g.gaps?.price_min_mxn?.faltantes || 0),
+            con_lat: t - (g.gaps?.lat?.faltantes || 0),
+            con_descripcion: t - (g.gaps?.description_es?.faltantes || 0),
+            con_num_unidades: t - (g.gaps?.total_units?.faltantes || 0),
+            con_telefono: t - (g.gaps?.contact_phone?.faltantes || 0),
+          });
+          if (g.portal_coverage) updatePortalTable(g.portal_coverage);
+        }
+        break;
+      case 'stats_update':
+        if (data.stats) {
+          const s = data.stats;
+          const elapsed = data.elapsed ? Math.round(data.elapsed) + 's' : '';
+          addFeed({
+            dev_name: 'RESUMEN',
+            city: elapsed,
+            fields: [`geo:${s.geocoded}`, `scrape:${s.scraped}`, `search:${s.searched}`, `ai:${s.ai_enriched}`],
+          });
+        }
+        break;
+      case 'agent_status':
+        setAgentState(data.status);
+        if (data.status === 'completed' || data.status === 'idle') {
+          refreshCoverage();
+        }
+        break;
+    }
+  }
+
+  // Init
+  refreshCoverage();
+  connect();
+})();
+</script>
+</body>
+</html>
