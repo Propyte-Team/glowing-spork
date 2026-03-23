@@ -251,7 +251,7 @@ async def upsert_pendiente(
     """Inserta o actualiza un registro en enrichment_pendientes."""
     campos_arr = "'{}'::text[]"
     if campos_faltantes:
-        items = ",".join(f'"{c}"' for c in campos_faltantes)
+        items = ",".join(f"'{_escape_sql(c)}'" for c in campos_faltantes)
         campos_arr = f"ARRAY[{items}]::text[]"
 
     sql = f"""
