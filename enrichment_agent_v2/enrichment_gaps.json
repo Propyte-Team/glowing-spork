@@ -1,0 +1,237 @@
+{
+  "total_developments": 2002,
+  "gaps": {
+    "price_min_mxn": {
+      "existentes": 479,
+      "faltantes": 1523,
+      "pct_faltante": 76,
+      "prioridad": "ALTA"
+    },
+    "price_max_mxn": {
+      "existentes": 294,
+      "faltantes": 1708,
+      "pct_faltante": 85,
+      "prioridad": "ALTA"
+    },
+    "lat": {
+      "existentes": 1298,
+      "faltantes": 704,
+      "pct_faltante": 35,
+      "prioridad": "ALTA"
+    },
+    "lng": {
+      "existentes": 1298,
+      "faltantes": 704,
+      "pct_faltante": 35,
+      "prioridad": "ALTA"
+    },
+    "description_es": {
+      "existentes": 1041,
+      "faltantes": 961,
+      "pct_faltante": 48,
+      "prioridad": "MEDIA"
+    },
+    "images": {
+      "existentes": 2002,
+      "faltantes": 0,
+      "pct_faltante": 0,
+      "prioridad": "MEDIA"
+    },
+    "developer_id": {
+      "existentes": 1140,
+      "faltantes": 862,
+      "pct_faltante": 43,
+      "prioridad": "MEDIA"
+    },
+    "contact_phone": {
+      "existentes": 1125,
+      "faltantes": 877,
+      "pct_faltante": 44,
+      "prioridad": "MEDIA"
+    },
+    "source_url": {
+      "existentes": 2002,
+      "faltantes": 0,
+      "pct_faltante": 0,
+      "prioridad": "BAJA"
+    },
+    "amenities": {
+      "existentes": 2002,
+      "faltantes": 0,
+      "pct_faltante": 0,
+      "prioridad": "MEDIA"
+    },
+    "total_units": {
+      "existentes": 1170,
+      "faltantes": 832,
+      "pct_faltante": 42,
+      "prioridad": "MEDIA"
+    },
+    "delivery_text": {
+      "existentes": 1198,
+      "faltantes": 804,
+      "pct_faltante": 40,
+      "prioridad": "MEDIA"
+    },
+    "zone": {
+      "existentes": 1962,
+      "faltantes": 40,
+      "pct_faltante": 2,
+      "prioridad": "BAJA"
+    }
+  },
+  "registros_con_url_sin_precio": 1523,
+  "portales_con_mayor_brecha": [
+    {
+      "portal": "redsearch",
+      "registros": 1031,
+      "pct_sin_precio": 86
+    },
+    {
+      "portal": "TheRedSearch",
+      "registros": 697,
+      "pct_sin_precio": 80
+    },
+    {
+      "portal": "WebSearch",
+      "registros": 15,
+      "pct_sin_precio": 73
+    },
+    {
+      "portal": "TuDepa",
+      "registros": 15,
+      "pct_sin_precio": 87
+    }
+  ],
+  "portal_coverage": [
+    {
+      "portal": "redsearch",
+      "registros": 1031,
+      "con_precio": 143,
+      "con_coords": 328,
+      "con_imagen": 1031,
+      "con_descripcion": 1031
+    },
+    {
+      "portal": "TheRedSearch",
+      "registros": 697,
+      "con_precio": 142,
+      "con_coords": 697,
+      "con_imagen": 697,
+      "con_descripcion": 2
+    },
+    {
+      "portal": "La Haus",
+      "registros": 123,
+      "con_precio": 119,
+      "con_coords": 123,
+      "con_imagen": 123,
+      "con_descripcion": 1
+    },
+    {
+      "portal": "Factor Inmobiliario",
+      "registros": 30,
+      "con_precio": 12,
+      "con_coords": 30,
+      "con_imagen": 30,
+      "con_descripcion": 0
+    },
+    {
+      "portal": "Aventi Real Estate",
+      "registros": 24,
+      "con_precio": 24,
+      "con_coords": 24,
+      "con_imagen": 24,
+      "con_descripcion": 0
+    },
+    {
+      "portal": "Monterrey Skyline",
+      "registros": 15,
+      "con_precio": 12,
+      "con_coords": 15,
+      "con_imagen": 15,
+      "con_descripcion": 2
+    },
+    {
+      "portal": "WebSearch",
+      "registros": 15,
+      "con_precio": 4,
+      "con_coords": 15,
+      "con_imagen": 15,
+      "con_descripcion": 0
+    },
+    {
+      "portal": "TuDepa",
+      "registros": 15,
+      "con_precio": 2,
+      "con_coords": 15,
+      "con_imagen": 15,
+      "con_descripcion": 0
+    },
+    {
+      "portal": "Behome",
+      "registros": 12,
+      "con_precio": 10,
+      "con_coords": 11,
+      "con_imagen": 12,
+      "con_descripcion": 3
+    },
+    {
+      "portal": "Inmuebles24",
+      "registros": 10,
+      "con_precio": 0,
+      "con_coords": 10,
+      "con_imagen": 10,
+      "con_descripcion": 0
+    },
+    {
+      "portal": "GDC Desarrollos",
+      "registros": 10,
+      "con_precio": 10,
+      "con_coords": 10,
+      "con_imagen": 10,
+      "con_descripcion": 0
+    },
+    {
+      "portal": "Lamudi",
+      "registros": 7,
+      "con_precio": 0,
+      "con_coords": 7,
+      "con_imagen": 7,
+      "con_descripcion": 0
+    },
+    {
+      "portal": "Google News MX",
+      "registros": 6,
+      "con_precio": 0,
+      "con_coords": 6,
+      "con_imagen": 6,
+      "con_descripcion": 0
+    },
+    {
+      "portal": "Centro Urbano",
+      "registros": 3,
+      "con_precio": 0,
+      "con_coords": 3,
+      "con_imagen": 3,
+      "con_descripcion": 1
+    },
+    {
+      "portal": "Trovit",
+      "registros": 2,
+      "con_precio": 0,
+      "con_coords": 2,
+      "con_imagen": 2,
+      "con_descripcion": 0
+    },
+    {
+      "portal": "Inmobiliare Magazine",
+      "registros": 2,
+      "con_precio": 1,
+      "con_coords": 2,
+      "con_imagen": 2,
+      "con_descripcion": 1
+    }
+  ],
+  "generated_at": "2026-03-21T12:07:28.570505"
+}

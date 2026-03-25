@@ -802,6 +802,53 @@ async def _enrich_batch_task():
         _is_running = False
 
 
+# === Publisher Agent =========================================================
+
+_publisher_running = False
+
+
+@app.post("/webhook/publish-batch")
+async def webhook_publish_batch(
+    background_tasks: BackgroundTasks,
+    authorization: str | None = Header(None),
+):
+    """Cron cada 2h: evalúa calidad y publica desarrollos listos en WordPress."""
+    if not _check_auth(authorization):
+        raise HTTPException(status_code=401, detail="Unauthorized")
+
+    global _publisher_running
+    if _publisher_running:
+        return {"accepted": False, "reason": "publisher already running"}
+
+    background_tasks.add_task(_publish_batch_task)
+    return {"accepted": True}
+
+
+async def _publish_batch_task():
+    """Background task: evalúa candidatos y publica los que pasan el quality gate."""
+    global _publisher_running
+    _publisher_running = True
+    try:
+        import uuid
+        from agents.publisher.publisher import PublisherAgent
+        from agents.publisher.audit_log import ensure_audit_table
+
+        client = await _get_client()
+        await ensure_audit_table(client)
+
+        agent = PublisherAgent()
+        result = await agent.run_batch(client, batch_id=uuid.uuid4())
+        logger.info(
+            f"[publisher] Batch: {result['published']} publicados, "
+            f"{result['rejected']} rechazados, "
+            f"{result['ai_reviewed']} revisados por AI"
+        )
+    except Exception as e:
+        logger.error(f"[publisher] Error en batch task: {e}")
+    finally:
+        _publisher_running = False
+
+
 # === Entry point =============================================================
 
 if __name__ == "__main__":

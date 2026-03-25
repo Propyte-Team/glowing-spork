@@ -1,0 +1,853 @@
+REPORTE DRY-RUN — DUPLICADOS DETECTADOS
+Total: 1459 | Score=1.0: 1259 | Score<1.0: 200
+======================================================================
+
+SECCION 1: DUPLICADOS FUZZY (score < 1.0) — REQUIEREN REVISION
+----------------------------------------------------------------------
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (6c5d8afa...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (cac9a369...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (6c5d8afa...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (088460f9...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (6c5d8afa...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (14e6da89...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (6c5d8afa...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (c38d7aa7...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (cac9a369...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (6c5d8afa...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (cac9a369...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (088460f9...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (cac9a369...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (01bd749d...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (cac9a369...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (c38d7aa7...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (088460f9...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (6c5d8afa...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (088460f9...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (cac9a369...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (088460f9...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (01bd749d...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (088460f9...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (14e6da89...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (72acbc94...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (4164cc09...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (72acbc94...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (f8ab4b0d...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (f8ab4b0d...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (72acbc94...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (f8ab4b0d...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (8d1576a3...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (01bd749d...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (088460f9...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (01bd749d...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (14e6da89...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (01bd749d...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (cac9a369...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (01bd749d...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (c38d7aa7...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (14e6da89...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (088460f9...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (14e6da89...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (01bd749d...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (14e6da89...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (6c5d8afa...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (14e6da89...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (c38d7aa7...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (c38d7aa7...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (01bd749d...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (c38d7aa7...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (cac9a369...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (c38d7aa7...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B101 (6c5d8afa...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 1 BEDROOM B301 (c38d7aa7...)
+  B: LAS BRISAS RESIDENCES � 1 BEDROOM B201 (14e6da89...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (8d1576a3...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (f8ab4b0d...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (8d1576a3...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (4164cc09...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (4164cc09...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (8d1576a3...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (4164cc09...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (72acbc94...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: NATIVA TULUMtipologia: 2 bedroom condo (954fc004...)
+  B: NATIVA TULUMtipologia: 3 bedroom condo (823de315...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.974
+  A: NATIVA TULUMtipologia: 3 bedroom condo (823de315...)
+  B: NATIVA TULUMtipologia: 2 bedroom condo (954fc004...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.955
+  A: KUYAAN 44 - ESTUDIO 2B (a098b683...)
+  B: KUYAAN 44 - ESTUDIO 4B (07f7fc5f...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.955
+  A: KUYAAN 44 - ESTUDIO 2B (a098b683...)
+  B: KUYAAN 44 - ESTUDIO 4B (d149a638...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.955
+  A: KUYAAN 44 - ESTUDIO 4B (07f7fc5f...)
+  B: KUYAAN 44 - ESTUDIO 2B (a098b683...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.955
+  A: KUYAAN 44 - ESTUDIO 4B (07f7fc5f...)
+  B: KUYAAN 44 - ESTUDIO 2B (e756653b...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.955
+  A: KUYAAN 44 - ESTUDIO 2B (e756653b...)
+  B: KUYAAN 44 - ESTUDIO 4B (07f7fc5f...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.955
+  A: KUYAAN 44 - ESTUDIO 2B (e756653b...)
+  B: KUYAAN 44 - ESTUDIO 4B (d149a638...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.955
+  A: KUYAAN 44 - ESTUDIO 4B (d149a638...)
+  B: KUYAAN 44 - ESTUDIO 2B (a098b683...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.955
+  A: KUYAAN 44 - ESTUDIO 4B (d149a638...)
+  B: KUYAAN 44 - ESTUDIO 2B (e756653b...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.955
+  A: AYOOK CONDO SWIM UP 01 (bec6007b...)
+  B: AYOOK CONDO SWIM UP 02 (01f10e04...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.955
+  A: AYOOK CONDO SWIM UP 02 (01f10e04...)
+  B: AYOOK CONDO SWIM UP 01 (bec6007b...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: CENTURIA 15 BIS #103 (17adfd16...)
+  B: CENTURIA 15 BIS #104 (0661f9f2...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: CENTURIA 15 BIS #103 (17adfd16...)
+  B: CENTURIA 15 BIS #104 (e0f727f5...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: CENTURIA 15 BIS #104 (0661f9f2...)
+  B: CENTURIA 15 BIS #103 (17adfd16...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: CENTURIA 15 BIS #104 (0661f9f2...)
+  B: CENTURIA 15 BIS #103 (dd33890a...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: MOMA - 1 BEDROOM 401 (190cf047...)
+  B: MOMA - 1 BEDROOM 404 (dafe3ab2...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: MOMA - 1 BEDROOM 401 (190cf047...)
+  B: MOMA - 1 BEDROOM 404 (eb225fcb...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: MOMA - 1 BEDROOM 404 (dafe3ab2...)
+  B: MOMA - 1 BEDROOM 401 (190cf047...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: MOMA - 1 BEDROOM 404 (dafe3ab2...)
+  B: MOMA - 1 BEDROOM 401 (b89abeb5...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: CENTURIA 15 BIS #103 (dd33890a...)
+  B: CENTURIA 15 BIS #104 (0661f9f2...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: CENTURIA 15 BIS #103 (dd33890a...)
+  B: CENTURIA 15 BIS #104 (e0f727f5...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: CENTURIA 15 BIS #104 (e0f727f5...)
+  B: CENTURIA 15 BIS #103 (17adfd16...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: CENTURIA 15 BIS #104 (e0f727f5...)
+  B: CENTURIA 15 BIS #103 (dd33890a...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: MOMA - 1 BEDROOM 401 (b89abeb5...)
+  B: MOMA - 1 BEDROOM 404 (dafe3ab2...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: MOMA - 1 BEDROOM 401 (b89abeb5...)
+  B: MOMA - 1 BEDROOM 404 (eb225fcb...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: MOMA - 1 BEDROOM 404 (eb225fcb...)
+  B: MOMA - 1 BEDROOM 401 (190cf047...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.950
+  A: MOMA - 1 BEDROOM 404 (eb225fcb...)
+  B: MOMA - 1 BEDROOM 401 (b89abeb5...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (354cdcb2...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (4164cc09...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (354cdcb2...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (72acbc94...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (354cdcb2...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (f8ab4b0d...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (354cdcb2...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (8d1576a3...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (72acbc94...)
+  B: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (354cdcb2...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (72acbc94...)
+  B: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (fa984b3f...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (f8ab4b0d...)
+  B: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (354cdcb2...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (f8ab4b0d...)
+  B: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (fa984b3f...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (fa984b3f...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (f8ab4b0d...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (fa984b3f...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (8d1576a3...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (fa984b3f...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (72acbc94...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (fa984b3f...)
+  B: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (4164cc09...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (8d1576a3...)
+  B: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (354cdcb2...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B202 (8d1576a3...)
+  B: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (fa984b3f...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (4164cc09...)
+  B: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (354cdcb2...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.949
+  A: LAS BRISAS RESIDENCES � 2 BEDROOM B302 (4164cc09...)
+  B: LAS BRISAS RESIDENCES �  2 BEDROOM B102 (fa984b3f...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: Menesse Cocobeach 3 (561dc172...)
+  B: MENESSE COCOBEACH 2 (7aa1eea3...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: Menesse Cocobeach 3 (561dc172...)
+  B: Menesse Cocobeach 2 (ff1a0788...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: Menesse Cocobeach 3 (561dc172...)
+  B: Menesse Cocobeach 4 (43ade474...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: Menesse Cocobeach 3 (561dc172...)
+  B: MENESSE COCOBEACH 4 (f4a718bf...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: Menesse Cocobeach 4 (43ade474...)
+  B: Menesse Cocobeach 3 (561dc172...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: Menesse Cocobeach 4 (43ade474...)
+  B: MENESSE COCOBEACH 2 (7aa1eea3...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: Menesse Cocobeach 4 (43ade474...)
+  B: Menesse Cocobeach 2 (ff1a0788...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: Menesse Cocobeach 4 (43ade474...)
+  B: MENESSE COCOBEACH 3 (165d1d3c...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: Menesse Cocobeach 2 (ff1a0788...)
+  B: Menesse Cocobeach 3 (561dc172...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: Menesse Cocobeach 2 (ff1a0788...)
+  B: Menesse Cocobeach 4 (43ade474...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: Menesse Cocobeach 2 (ff1a0788...)
+  B: MENESSE COCOBEACH 3 (165d1d3c...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: Menesse Cocobeach 2 (ff1a0788...)
+  B: MENESSE COCOBEACH 4 (f4a718bf...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: MENESSE COCOBEACH 3 (165d1d3c...)
+  B: MENESSE COCOBEACH 2 (7aa1eea3...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: MENESSE COCOBEACH 3 (165d1d3c...)
+  B: Menesse Cocobeach 2 (ff1a0788...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: MENESSE COCOBEACH 3 (165d1d3c...)
+  B: Menesse Cocobeach 4 (43ade474...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: MENESSE COCOBEACH 3 (165d1d3c...)
+  B: MENESSE COCOBEACH 4 (f4a718bf...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: MENESSE COCOBEACH 4 (f4a718bf...)
+  B: Menesse Cocobeach 3 (561dc172...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: MENESSE COCOBEACH 4 (f4a718bf...)
+  B: MENESSE COCOBEACH 2 (7aa1eea3...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: MENESSE COCOBEACH 4 (f4a718bf...)
+  B: Menesse Cocobeach 2 (ff1a0788...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: MENESSE COCOBEACH 4 (f4a718bf...)
+  B: MENESSE COCOBEACH 3 (165d1d3c...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: MENESSE COCOBEACH 2 (7aa1eea3...)
+  B: Menesse Cocobeach 3 (561dc172...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: MENESSE COCOBEACH 2 (7aa1eea3...)
+  B: Menesse Cocobeach 4 (43ade474...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: MENESSE COCOBEACH 2 (7aa1eea3...)
+  B: MENESSE COCOBEACH 3 (165d1d3c...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.947
+  A: MENESSE COCOBEACH 2 (7aa1eea3...)
+  B: MENESSE COCOBEACH 4 (f4a718bf...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.941
+  A: AMARES - LOTE 010 (de708099...)
+  B: AMARES - LOTE 012 (27b69f87...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.941
+  A: AMARES - LOTE 012 (27b69f87...)
+  B: AMARES - LOTE 010 (de708099...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.939
+  A: KUYAAN CORAL SUITES - ESTUDIO 4B (2aaf52ed...)
+  B: KUYAAN CORAL SUITES - ESTUDIO 1PB (66d88d5a...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.939
+  A: KUYAAN CORAL SUITES - ESTUDIO 4B (2aaf52ed...)
+  B: KUYAAN CORAL SUITES - ESTUDIO 1PB (da7b9082...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.939
+  A: KUYAAN CORAL SUITES - ESTUDIO 1PB (66d88d5a...)
+  B: KUYAAN CORAL SUITES - ESTUDIO 4B (2aaf52ed...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.939
+  A: KUYAAN CORAL SUITES - ESTUDIO 1PB (66d88d5a...)
+  B: KUYAAN CORAL SUITES - ESTUDIO 4B (f70462e5...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.939
+  A: KUYAAN CORAL SUITES - ESTUDIO 4B (f70462e5...)
+  B: KUYAAN CORAL SUITES - ESTUDIO 1PB (66d88d5a...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.939
+  A: KUYAAN CORAL SUITES - ESTUDIO 4B (f70462e5...)
+  B: KUYAAN CORAL SUITES - ESTUDIO 1PB (da7b9082...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.939
+  A: KUYAAN CORAL SUITES - ESTUDIO 1PB (da7b9082...)
+  B: KUYAAN CORAL SUITES - ESTUDIO 4B (2aaf52ed...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.939
+  A: KUYAAN CORAL SUITES - ESTUDIO 1PB (da7b9082...)
+  B: KUYAAN CORAL SUITES - ESTUDIO 4B (f70462e5...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.930
+  A: XPU HA BEACH - ESTRELLA DE MAR LOTE 42 MZ 2 (2a91d0b0...)
+  B: XPU HA BEACH - ESTRELLA DE MAR LOTE 33 MZ 1 (e0e92297...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.930
+  A: XPU HA BEACH - ESTRELLA DE MAR LOTE 33 MZ 1 (e0e92297...)
+  B: XPU HA BEACH - ESTRELLA DE MAR LOTE 42 MZ 2 (2a91d0b0...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.930
+  A: XPU HA BEACH - ESTRELLA DE MAR LOTE 33 MZ 1 (e0e92297...)
+  B: XPUHA BEACH - ESTRELLA DE MAR  LOTE 30 MZ 1 (d27b5322...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.930
+  A: XPUHA BEACH - ESTRELLA DE MAR  LOTE 30 MZ 1 (d27b5322...)
+  B: XPU HA BEACH - ESTRELLA DE MAR LOTE 33 MZ 1 (e0e92297...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.929
+  A: MUUK TULUM 103 (aed858c4...)
+  B: MUUK TULUM 105 (0fb79d5e...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.929
+  A: MUUK TULUM 105 (0fb79d5e...)
+  B: MUUK TULUM 103 (aed858c4...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.926
+  A: VILLA 4 REC IN XPU-HA BEACH (0027ca71...)
+  B: VILLA 4-REC EN XPU-HA BEACH (471f6dba...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.926
+  A: VILLA 4-REC EN XPU-HA BEACH (471f6dba...)
+  B: VILLA 4 REC IN XPU-HA BEACH (0027ca71...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.920
+  A: TAO ZEN - 2 BEDROOM CONDO (4a38f507...)
+  B: TAO KIN - 2 BEDROOM CONDO (789313be...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.920
+  A: TAO KIN - 2 BEDROOM CONDO (789313be...)
+  B: TAO ZEN - 2 BEDROOM CONDO (4a38f507...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.917
+  A: Nativa Tulum (b84ebb24...)
+  B: Nativo Tulum (54bd3ff1...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.917
+  A: Nativa Tulum (b84ebb24...)
+  B: NATIVO TULUM (d26cb008...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.917
+  A: Nativo Tulum (54bd3ff1...)
+  B: Nativa Tulum (b84ebb24...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.917
+  A: Nativo Tulum (54bd3ff1...)
+  B: NATIVA TULUM (c60b15cc...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.917
+  A: NATIVO TULUM (d26cb008...)
+  B: Nativa Tulum (b84ebb24...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.917
+  A: NATIVO TULUM (d26cb008...)
+  B: NATIVA TULUM (c60b15cc...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.917
+  A: NATIVA TULUM (c60b15cc...)
+  B: Nativo Tulum (54bd3ff1...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.917
+  A: NATIVA TULUM (c60b15cc...)
+  B: NATIVO TULUM (d26cb008...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.913
+  A: ANAH 5TA - 3 BEDROOM  E (2f242fa1...)
+  B: ANAH 5TA - 1 BEDROOM  A (8ef62077...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.913
+  A: ANAH 5TA - 3 BEDROOM  E (2f242fa1...)
+  B: ANAH 5TA - 1 BEDROOM  A (ed32a750...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.913
+  A: ANAH 5TA - 1 BEDROOM  A (ed32a750...)
+  B: ANAH 5TA - 3 BEDROOM  E (2f242fa1...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.913
+  A: ANAH 5TA - 1 BEDROOM  A (ed32a750...)
+  B: ANAH 5TA - 3 BEDROOM  E (3d53837a...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.913
+  A: ANAH 5TA - 3 BEDROOM  E (3d53837a...)
+  B: ANAH 5TA - 1 BEDROOM  A (8ef62077...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.913
+  A: ANAH 5TA - 3 BEDROOM  E (3d53837a...)
+  B: ANAH 5TA - 1 BEDROOM  A (ed32a750...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.913
+  A: MISTIQ TULUM - STUDIO (ce8aa213...)
+  B: MISTIQ TULUM - 2 STUDIO (49f19312...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.913
+  A: MISTIQ TULUM - 2 STUDIO (49f19312...)
+  B: MISTIQ TULUM - STUDIO (ce8aa213...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.909
+  A: Edena Tulum (42a9355c...)
+  B: Erena Tulum (f09bb386...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.909
+  A: Edena Tulum (42a9355c...)
+  B: ERENA TULUM (d4b78e3c...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.909
+  A: Erena Tulum (f09bb386...)
+  B: Edena Tulum (42a9355c...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.909
+  A: Erena Tulum (f09bb386...)
+  B: EDENA TULUM (38e43fc7...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.909
+  A: TAO HIRA - 2 BEDROOM GROUND FLOOR (283d41a2...)
+  B: TAO QI - 2 BEDROOM GROUND FLOOR (229a5707...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.909
+  A: TAO QI - 2 BEDROOM GROUND FLOOR (229a5707...)
+  B: TAO HIRA - 2 BEDROOM GROUND FLOOR (283d41a2...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.909
+  A: ERENA TULUM (d4b78e3c...)
+  B: Edena Tulum (42a9355c...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.909
+  A: ERENA TULUM (d4b78e3c...)
+  B: EDENA TULUM (38e43fc7...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.909
+  A: AYOOK CONDO SWIM UP 01 (bec6007b...)
+  B: AYOOK CONDO SWIM UP 17 (b3d30f49...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.909
+  A: AYOOK CONDO SWIM UP 02 (01f10e04...)
+  B: AYOOK CONDO SWIM UP 17 (b3d30f49...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.909
+  A: AYOOK CONDO SWIM UP 17 (b3d30f49...)
+  B: AYOOK CONDO SWIM UP 02 (01f10e04...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.909
+  A: AYOOK CONDO SWIM UP 17 (b3d30f49...)
+  B: AYOOK CONDO SWIM UP 01 (bec6007b...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.909
+  A: EDENA TULUM (38e43fc7...)
+  B: Erena Tulum (f09bb386...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.909
+  A: EDENA TULUM (38e43fc7...)
+  B: ERENA TULUM (d4b78e3c...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.900
+  A: Casa Naha (bc71b217...)
+  B: CASA NAHIA (1bcfd3d3...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.900
+  A: CASA NAHA (ad2d2ba6...)
+  B: CASA NAHIA (1bcfd3d3...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.900
+  A: CASA NAHIA (1bcfd3d3...)
+  B: Casa Naha (bc71b217...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.900
+  A: CASA NAHIA (1bcfd3d3...)
+  B: CASA NAHA (ad2d2ba6...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.889
+  A: Akna II (6e3969bc...)
+  B: Akna III (a3ab654a...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.889
+  A: Akna II (6e3969bc...)
+  B: AKNA III (45647657...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.889
+  A: Akna III (a3ab654a...)
+  B: Akna II (6e3969bc...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.889
+  A: Akna III (a3ab654a...)
+  B: AKNA II (84036666...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.889
+  A: Spirit Condos 1990 (7a3c1116...)
+  B: Spirit Condos 1904 (adfa1e2e...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.889
+  A: Spirit Condos 1990 (7a3c1116...)
+  B: Spirit Condos 1978 (a73ec13f...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.889
+  A: Spirit Condos 1978 (a73ec13f...)
+  B: Spirit Condos 1904 (adfa1e2e...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.889
+  A: Spirit Condos 1978 (a73ec13f...)
+  B: Spirit Condos 1990 (7a3c1116...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.889
+  A: Spirit Condos 1904 (adfa1e2e...)
+  B: Spirit Condos 1978 (a73ec13f...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.889
+  A: Spirit Condos 1904 (adfa1e2e...)
+  B: Spirit Condos 1990 (7a3c1116...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.889
+  A: AKNA III (45647657...)
+  B: Akna II (6e3969bc...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.889
+  A: AKNA III (45647657...)
+  B: AKNA II (84036666...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.889
+  A: AKNA II (84036666...)
+  B: Akna III (a3ab654a...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.889
+  A: AKNA II (84036666...)
+  B: AKNA III (45647657...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.885
+  A: CASA DE DOS HABITACIONES EN CAMPECHE COUNTRY CLUB (47b9433f...)
+  B: CASA DE CUATRO HABITACIONES EN CAMPECHE COUNTRY CLUB (d40db137...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.885
+  A: CASA DE CUATRO HABITACIONES EN CAMPECHE COUNTRY CLUB (d40db137...)
+  B: CASA DE DOS HABITACIONES EN CAMPECHE COUNTRY CLUB (47b9433f...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.884
+  A: XPU HA BEACH - ESTRELLA DE MAR LOTE 42 MZ 2 (2a91d0b0...)
+  B: XPUHA BEACH - ESTRELLA DE MAR  LOTE 30 MZ 1 (d27b5322...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.884
+  A: XPUHA BEACH - ESTRELLA DE MAR  LOTE 30 MZ 1 (d27b5322...)
+  B: XPU HA BEACH - ESTRELLA DE MAR LOTE 42 MZ 2 (2a91d0b0...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.879
+  A: PUERTO MORELOS - BEACH FRONT LAND (cef7c347...)
+  B: PUERTO MORELOS - BEACHFRONT LOT (97a261fd...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.879
+  A: PUERTO MORELOS - BEACHFRONT LOT (97a261fd...)
+  B: PUERTO MORELOS - BEACH FRONT LAND (cef7c347...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.875
+  A: Emana II (66ed5dcf...)
+  B: Emana I (c998ccc0...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.875
+  A: Emana I (c998ccc0...)
+  B: Emana II (66ed5dcf...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.875
+  A: Serenada (edb474df...)
+  B: Serenata (a854d8c2...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.875
+  A: Serenata (a854d8c2...)
+  B: Serenada (edb474df...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.875
+  A: NATIVA TULUMtipologia: Estudio (71047e0e...)
+  B: NATIVA TULUMtipologia: Studio PH (3e9082ba...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.875
+  A: NATIVA TULUMtipologia: Studio PH (3e9082ba...)
+  B: NATIVA TULUMtipologia: Estudio (71047e0e...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.870
+  A: THE BOAT - 2 BEDROOM (b0a4c030...)
+  B: THE BOAT - 2 BEDROOM PH (7b2ae693...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.870
+  A: THE BOAT - 2 BEDROOM (b0a4c030...)
+  B: THE BOAT - 2 BEDROOM PH (bd4fb191...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.870
+  A: THE BOAT - 2 BEDROOM PH (7b2ae693...)
+  B: THE BOAT - 2 BEDROOM (b0a4c030...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.870
+  A: THE BOAT - 2 BEDROOM PH (7b2ae693...)
+  B: THE BOAT - 2 BEDROOM (d62d5068...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.870
+  A: THE BOAT - 2 BEDROOM (d62d5068...)
+  B: THE BOAT - 2 BEDROOM PH (7b2ae693...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.870
+  A: THE BOAT - 2 BEDROOM (d62d5068...)
+  B: THE BOAT - 2 BEDROOM PH (bd4fb191...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.870
+  A: THE BOAT - 2 BEDROOM PH (bd4fb191...)
+  B: THE BOAT - 2 BEDROOM (b0a4c030...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.870
+  A: THE BOAT - 2 BEDROOM PH (bd4fb191...)
+  B: THE BOAT - 2 BEDROOM (d62d5068...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.857
+  A: OXYGEN - 1 BEDROOM (4b8b17a5...)
+  B: OXYGEN - 1 BEDROOM 3B (22479492...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.857
+  A: OXYGEN - 1 BEDROOM (4b8b17a5...)
+  B: OXYGEN - 1 BEDROOM 3B (42299d1f...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.857
+  A: OXYGEN - 1 BEDROOM 3B (22479492...)
+  B: OXYGEN - 1 BEDROOM (4b8b17a5...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.857
+  A: OXYGEN - 1 BEDROOM 3B (22479492...)
+  B: OXYGEN - 1 BEDROOM (1e9fcdc6...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.857
+  A: OXYGEN - 1 BEDROOM (1e9fcdc6...)
+  B: OXYGEN - 1 BEDROOM 3B (22479492...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.857
+  A: OXYGEN - 1 BEDROOM (1e9fcdc6...)
+  B: OXYGEN - 1 BEDROOM 3B (42299d1f...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.857
+  A: OXYGEN - 1 BEDROOM 3B (42299d1f...)
+  B: OXYGEN - 1 BEDROOM (4b8b17a5...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.857
+  A: OXYGEN - 1 BEDROOM 3B (42299d1f...)
+  B: OXYGEN - 1 BEDROOM (1e9fcdc6...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.857
+  A: BLUE LAGOON, VACATION CONDO (d9b2caf6...)
+  B: WHITE LAGOON, VACATION CONDO (6197529f...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.857
+  A: WHITE LAGOON, VACATION CONDO (6197529f...)
+  B: BLUE LAGOON, VACATION CONDO (d9b2caf6...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.850
+  A: KIIN TULUM  A -  203 (3cc7e1b0...)
+  B: KIIN TULUM A - 202 (8692c790...)
+
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] score=0.850
+  A: KIIN TULUM A - 202 (8692c790...)
+  B: KIIN TULUM  A -  203 (3cc7e1b0...)
+
+
+======================================================================
+SECCION 2: DUPLICADOS EXACTOS (score=1.0) — 1259 entradas (seguros)
+----------------------------------------------------------------------
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Emana (699f0371...) <-> B: L�tica (0a52c7f4...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Emana (699f0371...) <-> B: West Living (e74cfbaa...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Emana (699f0371...) <-> B: West Living (dc419621...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Emana (699f0371...) <-> B: Emana (79246146...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Emana (79246146...) <-> B: L�tica (0a52c7f4...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Emana (79246146...) <-> B: West Living (e74cfbaa...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Emana (79246146...) <-> B: West Living (dc419621...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Emana (79246146...) <-> B: Emana (699f0371...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Thompson Residences (a330c41f...) <-> B: Thompson Residences (d7a898cb...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: West Living (e74cfbaa...) <-> B: L�tica (0a52c7f4...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: West Living (e74cfbaa...) <-> B: West Living (dc419621...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: West Living (e74cfbaa...) <-> B: Emana (79246146...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: West Living (e74cfbaa...) <-> B: Emana (699f0371...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: L�tica (0a52c7f4...) <-> B: West Living (e74cfbaa...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: L�tica (0a52c7f4...) <-> B: West Living (dc419621...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: L�tica (0a52c7f4...) <-> B: Emana (79246146...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: L�tica (0a52c7f4...) <-> B: Emana (699f0371...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: West Living (dc419621...) <-> B: L�tica (0a52c7f4...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: West Living (dc419621...) <-> B: West Living (e74cfbaa...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: West Living (dc419621...) <-> B: Emana (79246146...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: West Living (dc419621...) <-> B: Emana (699f0371...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Valle Aurora Canc�n (618e7b30...) <-> B: Valle Aurora Canc�n (c57d575a...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Mayakoba Country Club (21c4b9a2...) <-> B: Mayakoba Country Club (0432b1b7...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Valle Aurora Canc�n (c57d575a...) <-> B: Valle Aurora Canc�n (618e7b30...)
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] A: Akna II (6e3969bc...) <-> B: AKNA II (84036666...)
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] A: ARTRA TULUM (f448016b...) <-> B: Artra Tulum (1d459f82...)
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] A: Afrodita retreat (b482945c...) <-> B: AFRODITA RETREAT (bcab6856...)
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] A: 404 Tulum residences (9c1dff49...) <-> B: 404 TULUM RESIDENCES (c7db5c80...)
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] A: Aldea Om (e0fb55e8...) <-> B: ALDEA OM (c3baa15f...)
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] A: Akua signature (61bf3bf0...) <-> B: AKUA SIGNATURE (42c22b21...)
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] A: Ahimsa (50c846c9...) <-> B: AHIMSA (d9aaad2f...)
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] A: Aldea Chukum (0533f242...) <-> B: ALDEA CHUKUM (f5b67dfb...)
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] A: Akua reserve (21153a4a...) <-> B: AKUA RESERVE (f3ca16dd...)
+[INFO] dedup.run:   DUPLICADO [fuzzy_name] A: Afra jungle (c1df402a...) <-> B: AFRA JUNGLE (6d0dd2cd...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Torre Duke (700dcd73...) <-> B: Dhara Living (b58b5898...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Torre Duke (700dcd73...) <-> B: Vista Del Country (d603a085...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Grand Tower Centenario (ea39cf59...) <-> B: More Escand�n (ad3f7918...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Dhara Living (b58b5898...) <-> B: Vista Del Country (d603a085...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Dhara Living (b58b5898...) <-> B: Torre Duke (700dcd73...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Vista Del Country (d603a085...) <-> B: Dhara Living (b58b5898...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: Vista Del Country (d603a085...) <-> B: Torre Duke (700dcd73...)
+[INFO] dedup.run:   DUPLICADO [exact_source_url] A: More Escand�n (ad3f7918...) <-> B: Grand Tower Centenario (ea39cf59...)
+... y 1209 mas
